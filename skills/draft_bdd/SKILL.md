@@ -13,22 +13,31 @@ Use available context such as:
 - Existing flows or logic
 - User input
 
+## Agent orchestration
+
+Use the **bdd-writer** agent to generate the scenarios.
+
+The agent should:
+- specialise in writing precise, testable Gherkin
+- ensure strong scenario coverage
+- avoid ambiguity and vague language
+
 ## Instructions
 
+Before producing the final scenarios, the bdd-writer agent should:
+
 1. Identify the core user journeys and system behaviours
-2. Break these into discrete scenarios
-3. Write scenarios using Gherkin syntax:
-   - Given
-   - When
-   - Then
-4. Cover:
+2. Decompose each journey into discrete, testable behaviours
+3. Identify:
    - Happy paths
    - Edge cases
-   - Failure scenarios
-5. Ensure scenarios are:
-   - Testable
-   - Unambiguous
-   - Independent where possible
+   - Validation failures
+   - System failures
+   - User misuse or unexpected behaviour
+4. Ensure each scenario represents a single behaviour
+5. Validate that each scenario is independently testable
+
+Then generate the final BDD output.
 
 ## Output structure
 
@@ -68,3 +77,4 @@ docs/bdd/<feature-name>.feature
 - Each scenario should test one behaviour
 - Do not combine multiple outcomes into one scenario
 - Prefer more smaller scenarios over fewer complex ones
+- Do not expose internal reasoning steps in the output
