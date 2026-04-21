@@ -15,14 +15,16 @@ This repository contains:
 mkdir my-project
 cd my-project
 git init
-
+```
 - Existing Project
+```bash
 git clone <repo-url>
 cd <repo-name>
-
+```
 - Run the bootstrap script
+```bash
 curl -sSL https://raw.githubusercontent.com/Alex-862/claude-pm-playbook/main/bootstrap.sh | bash
-
+```
 - Start Claude
 - Use standard skills and workflows
 
@@ -49,5 +51,6 @@ curl -sSL https://raw.githubusercontent.com/Alex-862/claude-pm-playbook/main/boo
 ├─ templates/
 ├─ bootstrap.sh
 └─ README.md
+```
 
 
