@@ -1,19 +1,28 @@
 #!/usr/bin/env bash
 set -e
 
-PLAYBOOK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_URL="https://github.com/Alex-862/claude-pm-playbook.git"
+TMP_DIR="$(mktemp -d)"
+
+cleanup() {
+  rm -rf "$TMP_DIR"
+}
+trap cleanup EXIT
 
 echo "Setting up AI PM Playbook..."
+
+echo "Cloning playbook..."
+git clone --depth 1 "$REPO_URL" "$TMP_DIR" >/dev/null 2>&1
 
 echo "Creating Claude directories..."
 mkdir -p "$HOME/.claude/skills"
 mkdir -p "$HOME/.claude/agents"
 
 echo "Installing skills..."
-cp -R "$PLAYBOOK_DIR/skills/." "$HOME/.claude/skills/"
+cp -R "$TMP_DIR/skills/." "$HOME/.claude/skills/"
 
 echo "Installing agents..."
-cp -R "$PLAYBOOK_DIR/agents/." "$HOME/.claude/agents/"
+cp -R "$TMP_DIR/agents/." "$HOME/.claude/agents/"
 
 echo "Creating project docs folders..."
 mkdir -p docs/prd
@@ -22,7 +31,7 @@ mkdir -p docs/summaries
 
 if [ ! -f "CLAUDE.md" ]; then
   echo "Adding starter CLAUDE.md to project root..."
-  cp "$PLAYBOOK_DIR/templates/CLAUDE.md" "./CLAUDE.md"
+  cp "$TMP_DIR/templates/CLAUDE.md" "./CLAUDE.md"
 else
   echo "CLAUDE.md already exists in this project, leaving it unchanged."
 fi
