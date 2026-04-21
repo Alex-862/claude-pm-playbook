@@ -1,40 +1,53 @@
 ---
 name: spec_review
-description: Critically review a PRD (scope/proposal) to identify gaps, risks, ambiguities, and missing requirements.
+description: Critically review a PRD, feature, or proposal to identify gaps, risks, ambiguities, and missing requirements.
 ---
 
 # Spec Review
 
-Critically assess the PRD or proposal.
+Critically assess the current feature, PRD, or proposal.
 
-Your goal is not to restate the spec, it is to challenge it.
+Your goal is not to restate the spec — it is to challenge it.
 
-## Instructions
+Use available context such as:
+- PRDs
+- Feature analysis
+- Existing flows or logic
+- User input
+- Relevant code or documentation where available
 
-1. Review all available context:
-   - PRDs
-   - Feature analysis
-   - Existing code or flows
-   - User input
+## Agent orchestration
 
-2. Identify:
-   - Missing requirements
-   - Ambiguities or unclear logic
-   - Contradictions
-   - Edge cases not covered
-   - Failure scenarios not addressed
-   - Dependencies and integration risks
+Use the **requirements-critic** agent to perform the review.
 
-3. Evaluate:
-   - Testability (can this be turned into BDD?)
-   - Operational impact
-   - Fraud / compliance considerations (where relevant)
-   - Customer experience risks
+The agent should:
+- challenge assumptions
+- identify missing or incomplete requirements
+- surface ambiguity, contradictions, and unresolved decisions
+- prioritise high-impact risks and gaps over minor issues
 
-4. Suggest improvements:
-   - What should be clarified or added
-   - Where structure or wording should change
-   - What decisions need to be made
+## Reasoning process
+
+Before producing the final review, the requirements-critic agent should:
+
+1. Identify the explicit requirements stated in the spec
+2. Identify the implicit requirements needed for the feature to work coherently and safely
+3. Check for:
+   - missing requirements
+   - contradictory statements
+   - ambiguous logic
+   - unowned decisions
+   - missing edge cases
+   - failure scenarios not addressed
+4. Evaluate the spec across these lenses:
+   - customer experience
+   - operational handling
+   - technical integration
+   - fraud / abuse risk
+   - compliance / policy considerations where relevant
+   - testability
+5. Prioritise the most material issues first
+6. Then produce the final critique
 
 ## Output structure
 
@@ -50,7 +63,7 @@ Your goal is not to restate the spec, it is to challenge it.
 ### Ambiguities
 - Areas that could be interpreted multiple ways
 
-### Edge Cases Missing
+### Missing Edge Cases
 - Important scenarios not covered
 
 ### Recommendations
@@ -61,7 +74,9 @@ Your goal is not to restate the spec, it is to challenge it.
 
 ## Rules
 
-- Be direct and candid - do not soften critique unnecessarily
-- Do not assume intent - challenge unclear areas
+- Be direct and candid — do not soften critique unnecessarily
+- Do not assume intent — challenge unclear areas
 - Prioritise high-impact issues over minor details
-- Avoid rewriting the entire PRD - focus on critique
+- Avoid rewriting the entire PRD — focus on critique
+- Be explicit when something is inferred rather than evidenced
+- Do not expose internal reasoning steps in the output
