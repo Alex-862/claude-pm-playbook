@@ -11,6 +11,7 @@ This repository contains:
 ## How to use this playbook
 
 - New Project
+```bash
 mkdir my-project
 cd my-project
 git init
