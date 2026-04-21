@@ -1,6 +1,6 @@
 # AI PM Playbook
 
-A reusable Claude Code playbook for product managers.
+A standardised workflow for AI-native product development
 
 This repository contains:
 - Shared skills for common PM workflows
