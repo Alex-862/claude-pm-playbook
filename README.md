@@ -8,6 +8,24 @@ This repository contains:
 - A bootstrap script to install the playbook into any project
 - Starter project templates such as `CLAUDE.md`
 
+## How to use this playbook
+
+- New Project
+mkdir my-project
+cd my-project
+git init
+
+- Existing Project
+git clone <repo-url>
+cd <repo-name>
+
+- Run the bootstrap script
+curl -sSL https://raw.githubusercontent.com/Alex-862/claude-pm-playbook/main/bootstrap.sh | bash
+
+- Start Claude
+- Use standard skills and workflows
+
+
 ## Included skills
 
 - `analyse_feature` — understand an existing feature, journey, or codebase area before drafting anything
@@ -31,20 +49,4 @@ This repository contains:
 ├─ bootstrap.sh
 └─ README.md
 
-## How to use this playbook
-
-- New Project
-mkdir my-project
-cd my-project
-git init
-
-- Existing Project
-git clone <repo-url>
-cd <repo-name>
-
-- Run the bootstrap script
-curl -sSL https://raw.githubusercontent.com/Alex-862/claude-pm-playbook/main/bootstrap.sh | bash
-
-- Start Claude
-- Use standard skills and workflows
 
