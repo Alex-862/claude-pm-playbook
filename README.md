@@ -49,8 +49,28 @@ curl -sSL https://raw.githubusercontent.com/Alex-862/claude-pm-playbook/main/boo
 ├─ agents/
 ├─ skills/
 ├─ templates/
+├─ curriculum/          ← PM learning programme (start here if you're new)
 ├─ bootstrap.sh
 └─ README.md
 ```
 
+## Learning programme
 
+New to Claude Code or AI-native product workflows? Start with the curriculum:
+
+**[curriculum/README.md](curriculum/README.md)** — Overview, executive summary, and module index
+
+| Module | Topic |
+|--------|-------|
+| [Module 00](curriculum/module-00-mindset.md) | Why this changes everything |
+| [Module 01](curriculum/module-01-machine-readiness.md) | Machine setup |
+| [Module 02](curriculum/module-02-command-line.md) | Command line basics |
+| [Module 03](curriculum/module-03-github.md) | GitHub for PMs |
+| [Module 04](curriculum/module-04-markdown.md) | Markdown and structured artefacts |
+| [Module 05](curriculum/module-05-claude-code.md) | Claude Code basics |
+| [Module 06](curriculum/module-06-agent-workflows.md) | Using the skills in this repo |
+| [Module 07](curriculum/module-07-context-management.md) | Context management |
+| [Module 08](curriculum/module-08-ai-native-workflow.md) | End-to-end AI-native workflow |
+| [Workshop](curriculum/workshop-end-to-end.md) | Hands-on end-to-end workshop |
+
+Supporting documents: [Setup Guide](curriculum/setup-guide-mac.md) · [Governance](curriculum/governance-and-guardrails.md) · [Adoption Plan](curriculum/adoption-plan.md) · [Glossary](curriculum/glossary.md)
