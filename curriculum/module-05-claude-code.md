@@ -137,22 +137,22 @@ To see all available skills:
 
 To run the feature analysis skill:
 ```
-/analyse_feature
+/analyse-feature
 ```
 
 To draft a PRD:
 ```
-/draft_prd
+/draft-prd
 ```
 
 To draft BDD scenarios from an existing PRD:
 ```
-/draft_bdd
+/draft-bdd
 ```
 
 To run a spec review:
 ```
-/spec_review
+/spec-review
 ```
 
 When you run a skill, Claude Code will typically ask you for relevant context — which feature to analyse, which files to read, or which PRD to work from. Provide this context clearly and specifically.
@@ -165,12 +165,12 @@ The single most impactful thing you can do to improve Claude Code's outputs is t
 
 **Weak context:**
 ```
-/draft_prd — please write a PRD for the address update feature
+/draft-prd — please write a PRD for the address update feature
 ```
 
 **Strong context:**
 ```
-/draft_prd
+/draft-prd
 
 The feature is: Allow authenticated retail customers to update their home address via the mobile app.
 
@@ -197,7 +197,7 @@ When you run a skill, Claude Code:
 3. Produces a structured output
 4. Saves that output as a file in the appropriate folder
 
-For example, `/draft_prd` saves its output to `docs/prd/<feature-name>.md`. You can then open that file, review it, edit it, and use it as input for the next skill in the workflow.
+For example, `/draft-prd` saves its output to `docs/prd/<feature-name>.md`. You can then open that file, review it, edit it, and use it as input for the next skill in the workflow.
 
 **Always review the output.** Claude Code produces drafts, not final artefacts. Every output needs human judgement applied to it before it is used for real decisions.
 
@@ -250,9 +250,9 @@ Read the response. Notice how it is reading actual files — this is not a gener
 **Part 3: Run a skill with minimal context**
 
 ```
-/analyse_feature
+/analyse-feature
 
-Feature: the draft_prd skill in this repo
+Feature: the draft-prd skill in this repo
 ```
 
 Read the output. Note the structure of the analysis.
@@ -262,7 +262,7 @@ Read the output. Note the structure of the analysis.
 Now try again with more specific context. Ask it to analyse the BDD writer agent specifically, and tell it what you are trying to understand:
 
 ```
-/analyse_feature
+/analyse-feature
 
 I want to understand how the bdd-writer agent works. 
 Specifically: what inputs does it need, what does it do with them, and what does it produce?

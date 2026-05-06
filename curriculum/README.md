@@ -88,10 +88,10 @@ claude-pm-playbook/
 │   ├── requirements-critic.md
 │   └── bdd-writer.md
 ├── skills/                    — PM workflow skills
-│   ├── analyse_feature/
-│   ├── draft_prd/
-│   ├── draft_bdd/
-│   └── spec_review/
+│   ├── analyse-feature/
+│   ├── draft-prd/
+│   ├── draft-bdd/
+│   └── spec-review/
 ├── templates/                 — Starter templates for new projects
 │   ├── CLAUDE.md
 │   └── docs/

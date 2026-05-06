@@ -194,7 +194,7 @@ Scenario: Customer successfully sets a spending alert
 ```
 
 **Skill**
-In Claude Code: a pre-built workflow triggered by a `/command`. The skills in this playbook are `analyse_feature`, `draft_prd`, `draft_bdd`, and `spec_review`. See [Module 06](module-06-agent-workflows.md).
+In Claude Code: a pre-built workflow triggered by a `/command`. The skills in this playbook are `analyse-feature`, `draft-prd`, `draft-bdd`, and `spec-review`. See [Module 06](module-06-agent-workflows.md).
 
 **Spec-driven development**
 An engineering approach where detailed specifications (PRDs, BDD scenarios) are written first, and AI or human developers implement them from the spec. This is why structured, machine-readable product artefacts matter.

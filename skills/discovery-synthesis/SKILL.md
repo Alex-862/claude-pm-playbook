@@ -70,7 +70,7 @@ Typical outputs may include:
 
 ## Example Prompt
 
-Use the discovery_synthesis skill against the following folders:
+Use the discovery-synthesis skill against the following folders:
 
 - business-context/
 - discovery/

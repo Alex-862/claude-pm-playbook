@@ -1,5 +1,5 @@
 ---
-name: draft_bdd
+name: draft-bdd
 description: Convert a PRD, feature description or analysis into clear, testable BDD scenarios using Gherkin format.
 ---
 

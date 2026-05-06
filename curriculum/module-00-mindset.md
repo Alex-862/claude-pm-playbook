@@ -99,7 +99,7 @@ Before any of the technical modules, it is worth being precise about what we mea
 
 **An AI agent** (like Claude Code running in a repository) has access to your files, can read your documents, can search your codebase, can run structured workflows, and can produce artefacts that persist after the conversation ends. It operates *within* your context, not in isolation from it.
 
-The skills in this repository — `analyse_feature`, `draft_prd`, `draft_bdd`, `spec_review` — are AI agent workflows. When you run them, you are not starting a conversation. You are running a structured, repeatable process that reads your product context, reasons about it, and produces a structured output.
+The skills in this repository — `analyse-feature`, `draft-prd`, `draft-bdd`, `spec-review` — are AI agent workflows. When you run them, you are not starting a conversation. You are running a structured, repeatable process that reads your product context, reasons about it, and produces a structured output.
 
 This distinction matters enormously. A chatbot is a tool you use. An agent workflow is a capability you integrate into how you work.
 

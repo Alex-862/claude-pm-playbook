@@ -51,7 +51,7 @@ Typical outputs:
 
 ## Example Prompt
 
-Use the competitor_analysis skill to compare the product opportunity against relevant competitors and adjacent market patterns.
+Use the competitor-analysis skill to compare the product opportunity against relevant competitors and adjacent market patterns.
 
 Write the output to:
 

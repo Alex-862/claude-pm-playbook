@@ -89,12 +89,12 @@ This is being discussed for the next planning cycle. No committed date yet.
 
 Using this brief as your starting point:
 
-1. Run `/analyse_feature` to surface gaps, edge cases, and considerations not mentioned here
-2. Use the analysis + this brief to run `/draft_prd`
-3. Run `/spec_review` to identify what is still missing
+1. Run `/analyse-feature` to surface gaps, edge cases, and considerations not mentioned here
+2. Use the analysis + this brief to run `/draft-prd`
+3. Run `/spec-review` to identify what is still missing
 4. Resolve open questions with reasonable product decisions
-5. Run `/draft_bdd` from the reviewed PRD
-6. Run `/spec_review` on the BDD
+5. Run `/draft-bdd` from the reviewed PRD
+6. Run `/spec-review` on the BDD
 7. Assemble your handoff pack
 
 Note what this brief gets wrong, what it misses, and how the AI-native workflow helped you catch those gaps before reaching engineering.

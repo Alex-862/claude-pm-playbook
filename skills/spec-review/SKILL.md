@@ -1,5 +1,5 @@
 ---
-name: spec_review
+name: spec-review
 description: Critically review a PRD, feature, or proposal to identify gaps, risks, ambiguities, and missing requirements.
 ---
 

@@ -1,5 +1,5 @@
 ---
-name: draft_prd
+name: draft-prd
 description: Generate a structured Product Requirements Document from available context such as repo files, notes, or prior analysis.
 ---
 
@@ -11,7 +11,7 @@ This may include:
 - Feature analysis
 - Existing code or flows
 - Notes or prompts from the user
-- Prior outputs (e.g. from analyse_feature)
+- Prior outputs (e.g. from analyse-feature)
 
 ## Instructions
 

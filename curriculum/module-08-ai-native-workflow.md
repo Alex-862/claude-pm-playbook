@@ -34,19 +34,19 @@ This is not a theoretical workflow. It is what you do on a real feature, with re
 │     ↓                                       │
 │  2. Context Brief (CLAUDE.md + notes)       │
 │     ↓                                       │
-│  3. /analyse_feature → Feature Analysis     │
+│  3. /analyse-feature → Feature Analysis     │
 │     ↓                                       │
-│  4. /draft_prd → PRD Draft                  │
+│  4. /draft-prd → PRD Draft                  │
 │     ↓                                       │
 │  5. Human Review + Edit                     │
 │     ↓                                       │
-│  6. /spec_review → Critique                 │
+│  6. /spec-review → Critique                 │
 │     ↓                                       │
 │  7. Resolve Gaps + Stakeholder Input        │
 │     ↓                                       │
-│  8. /draft_bdd → BDD Scenarios             │
+│  8. /draft-bdd → BDD Scenarios             │
 │     ↓                                       │
-│  9. /spec_review (BDD) → BDD Critique       │
+│  9. /spec-review (BDD) → BDD Critique       │
 │     ↓                                       │
 │  10. Handoff Pack                           │
 │                                             │
@@ -87,9 +87,9 @@ Ensure:
 - You have gathered input from key stakeholders (compliance requirements, technical constraints)
 - You have anonymised or fictionalised any examples — no real customer data
 
-### Step 3: Feature Analysis (`/analyse_feature`)
+### Step 3: Feature Analysis (`/analyse-feature`)
 
-If this feature builds on something that already exists, run `analyse_feature` first. This gives you a structured understanding of the current state before writing requirements for the future state.
+If this feature builds on something that already exists, run `analyse-feature` first. This gives you a structured understanding of the current state before writing requirements for the future state.
 
 Give it:
 - The feature you want to understand
@@ -100,7 +100,7 @@ Review the output. Make notes. Update your context brief with anything important
 
 If this is a genuinely new feature with no existing code, you can skip this step and go straight to PRD drafting.
 
-### Step 4: Draft the PRD (`/draft_prd`)
+### Step 4: Draft the PRD (`/draft-prd`)
 
 Now write the PRD. Use your context brief as input. Be specific about:
 - The problem being solved
@@ -125,7 +125,7 @@ The PRD is saved to `docs/prd/<feature-name>.md`.
 
 Edit the PRD directly. Commit your changes.
 
-### Step 6: Spec Review (`/spec_review`)
+### Step 6: Spec Review (`/spec-review`)
 
 Run the spec review. This is your quality gate.
 
@@ -149,7 +149,7 @@ Chase these down. Update the PRD with the answers. Mark open questions as resolv
 
 Commit the updated PRD. Your commit message should explain what changed: `"Add compliance constraint on identity re-verification timeline"` not `"update PRD"`.
 
-### Step 8: Generate BDD Scenarios (`/draft_bdd`)
+### Step 8: Generate BDD Scenarios (`/draft-bdd`)
 
 With a reviewed, gap-filled PRD, generate the BDD scenarios. This is the most valuable single step for engineering handoff.
 
@@ -164,7 +164,7 @@ Give the skill:
 - Any specific edge cases or failure modes to emphasise
 - Anything the spec review flagged that should be reflected in scenario coverage
 
-### Step 9: BDD Review (`/spec_review` on the BDD file)
+### Step 9: BDD Review (`/spec-review` on the BDD file)
 
 Run a spec review against the BDD `.feature` file. Check:
 - Is every requirement in the PRD covered by at least one scenario?

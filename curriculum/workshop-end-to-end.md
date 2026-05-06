@@ -95,7 +95,7 @@ claude
 Run the feature analysis skill. For this workshop, we will analyse the sample brief rather than a codebase (since spending alerts may not exist in your repo):
 
 ```
-/analyse_feature
+/analyse-feature
 
 Feature: Personalised spending alerts for retail current account customers
 
@@ -137,7 +137,7 @@ git commit -m "Add spending alerts feature analysis"
 Now draft the PRD. Take your context brief and the analysis output and run:
 
 ```
-/draft_prd
+/draft-prd
 
 Feature: Personalised spending alerts — retail current account
 
@@ -196,7 +196,7 @@ git commit -m "Add initial spending alerts PRD draft"
 Run the spec review on your edited PRD:
 
 ```
-/spec_review
+/spec-review
 
 Please review the PRD at docs/prd/spending-alerts.md.
 
@@ -254,7 +254,7 @@ git commit -m "Resolve open questions — week definition, multi-alert support, 
 With a reviewed, gap-filled PRD, generate BDD scenarios:
 
 ```
-/draft_bdd
+/draft-bdd
 
 Generate BDD scenarios from the PRD at docs/prd/spending-alerts.md.
 
@@ -290,7 +290,7 @@ git commit -m "Add spending alerts BDD scenarios"
 Run a spec review on the BDD file:
 
 ```
-/spec_review
+/spec-review
 
 Please review the BDD scenarios at docs/bdd/spending-alerts.feature.
 

@@ -2,7 +2,7 @@
 
 ## Learning Objective
 
-Use each of the four skills in this playbook — `analyse_feature`, `draft_prd`, `draft_bdd`, and `spec_review` — to produce useful product artefacts from real context.
+Use each of the four skills in this playbook — `analyse-feature`, `draft-prd`, `draft-bdd`, and `spec-review` — to produce useful product artefacts from real context.
 
 ## Why It Matters for PMs
 
@@ -17,21 +17,21 @@ This module is primarily practical. It builds directly on Module 05 (Claude Code
 These skills are designed to be used in sequence:
 
 ```
-1. /analyse_feature    →    understand what exists (or what is proposed)
-2. /draft_prd          →    write structured requirements
-3. /draft_bdd          →    generate testable scenarios from the PRD
-4. /spec_review        →    critically assess the PRD or BDD before handoff
+1. /analyse-feature    →    understand what exists (or what is proposed)
+2. /draft-prd          →    write structured requirements
+3. /draft-bdd          →    generate testable scenarios from the PRD
+4. /spec-review        →    critically assess the PRD or BDD before handoff
 ```
 
-You do not always need to run all four. If you already have a PRD, start at `/draft_bdd`. If you want to critique an existing spec, start at `/spec_review`. But understanding the full flow is important.
+You do not always need to run all four. If you already have a PRD, start at `/draft-bdd`. If you want to critique an existing spec, start at `/spec-review`. But understanding the full flow is important.
 
 ---
 
-## Skill 1: `/analyse_feature`
+## Skill 1: `/analyse-feature`
 
 ### What It Does
 
-`analyse_feature` explores an existing feature — in code, in documents, or in a mix of both — and produces a structured summary that a PM can use as the foundation for a PRD.
+`analyse-feature` explores an existing feature — in code, in documents, or in a mix of both — and produces a structured summary that a PM can use as the foundation for a PRD.
 
 It is backed by the `repo-researcher` agent, which reads files and reasons about what the feature does, how it works, where it is unclear, and what risks exist.
 
@@ -47,7 +47,7 @@ It is backed by the `repo-researcher` agent, which reads files and reasons about
 The more specific you are, the better the output:
 
 ```
-/analyse_feature
+/analyse-feature
 
 Feature: Customer address update
 Relevant files: src/customers/address.js, docs/summaries/address-flow.md
@@ -68,21 +68,21 @@ A structured analysis with:
 - Risks, gaps, and unknowns
 - Suggested next steps
 
-This becomes your input for `draft_prd`.
+This becomes your input for `draft-prd`.
 
 ---
 
-## Skill 2: `/draft_prd`
+## Skill 2: `/draft-prd`
 
 ### What It Does
 
-`draft_prd` generates a structured PRD from your context. It pulls together feature analysis, notes, and your input to produce a well-structured requirements document.
+`draft-prd` generates a structured PRD from your context. It pulls together feature analysis, notes, and your input to produce a well-structured requirements document.
 
 It saves the output to `docs/prd/<feature-name>.md`.
 
 ### When to Use It
 
-- After running `analyse_feature` and having a summary to work from
+- After running `analyse-feature` and having a summary to work from
 - When starting a new feature and you want to structure your thinking
 - When you need to turn rough notes and stakeholder input into a formal document
 
@@ -101,7 +101,7 @@ The PRD skill benefits enormously from specific input. Before running it, write 
 Example:
 
 ```
-/draft_prd
+/draft-prd
 
 Feature: Self-service address update for retail customers via mobile app
 
@@ -132,15 +132,15 @@ A complete PRD in `docs/prd/` with sections covering:
 - Assumptions, dependencies, and risks
 - Monitoring and alerting
 
-**Always review and edit the PRD before passing it to `draft_bdd`.** The quality of your BDD scenarios depends directly on the quality of your PRD.
+**Always review and edit the PRD before passing it to `draft-bdd`.** The quality of your BDD scenarios depends directly on the quality of your PRD.
 
 ---
 
-## Skill 3: `/draft_bdd`
+## Skill 3: `/draft-bdd`
 
 ### What It Does
 
-`draft_bdd` converts a PRD into BDD (Behaviour-Driven Development) scenarios in Gherkin format. These scenarios describe the expected behaviour of a feature in a structured, testable way.
+`draft-bdd` converts a PRD into BDD (Behaviour-Driven Development) scenarios in Gherkin format. These scenarios describe the expected behaviour of a feature in a structured, testable way.
 
 It is backed by the `bdd-writer` agent, which reads the PRD and generates scenarios covering happy paths, edge cases, validation errors, system failures, and fraud/abuse cases.
 
@@ -180,7 +180,7 @@ Each scenario is independently testable. An engineer or QA analyst can look at e
 ### What to Give It
 
 ```
-/draft_bdd
+/draft-bdd
 
 Please generate BDD scenarios from the PRD at docs/prd/address-update.md.
 Focus especially on: identity re-verification edge cases, address validation errors, 
@@ -199,11 +199,11 @@ A `.feature` file with:
 
 ---
 
-## Skill 4: `/spec_review`
+## Skill 4: `/spec-review`
 
 ### What It Does
 
-`spec_review` critically reviews a PRD or BDD file and produces a structured critique identifying gaps, ambiguities, risks, and missing edge cases.
+`spec-review` critically reviews a PRD or BDD file and produces a structured critique identifying gaps, ambiguities, risks, and missing edge cases.
 
 It is backed by the `requirements-critic` agent, which reads the spec honestly and directly — it will not tell you what you want to hear.
 
@@ -217,7 +217,7 @@ It is backed by the `requirements-critic` agent, which reads the spec honestly a
 ### What to Give It
 
 ```
-/spec_review
+/spec-review
 
 Please review the PRD at docs/prd/address-update.md.
 Pay particular attention to:
@@ -246,24 +246,24 @@ A critique document with:
 The real workflow is not linear — it is iterative:
 
 ```
-analyse_feature
+analyse-feature
     ↓
-draft_prd
+draft-prd
     ↓
-spec_review         ← review critique
+spec-review         ← review critique
     ↓
 edit PRD            ← improve based on critique
     ↓
-draft_bdd
+draft-bdd
     ↓
-spec_review (BDD)   ← review BDD coverage
+spec-review (BDD)   ← review BDD coverage
     ↓
 edit BDD            ← fill gaps
     ↓
 handoff to engineering
 ```
 
-Running `spec_review` is not an admission that your PRD is poor. It is a quality gate. Every PRD should be reviewed before it reaches engineering.
+Running `spec-review` is not an admission that your PRD is poor. It is a quality gate. Every PRD should be reviewed before it reaches engineering.
 
 ---
 
@@ -278,7 +278,7 @@ cat curriculum/examples/sample-feature-brief.md
 
 **Step 2: Run feature analysis**
 ```
-/analyse_feature
+/analyse-feature
 
 Feature: [from the sample brief]
 Context: [paste the brief]
@@ -286,7 +286,7 @@ Context: [paste the brief]
 
 **Step 3: Draft a PRD**
 ```
-/draft_prd
+/draft-prd
 
 [provide the context from the brief and the analysis output]
 ```
@@ -295,7 +295,7 @@ Review the file saved to `docs/prd/`.
 
 **Step 4: Run a spec review**
 ```
-/spec_review
+/spec-review
 
 Please review docs/prd/<your-file>.md
 ```
@@ -308,7 +308,7 @@ Open the PRD file and fix the two most important gaps identified by the review. 
 
 **Step 6: Generate BDD scenarios**
 ```
-/draft_bdd
+/draft-bdd
 
 Generate scenarios from docs/prd/<your-file>.md
 Focus on the edge cases flagged in the spec review.
@@ -326,9 +326,9 @@ A complete set of artefacts for a single feature: a feature analysis, a reviewed
 
 ## Common Mistakes
 
-- **Running `draft_bdd` before `spec_review`** — Generate BDD from a reviewed PRD, not a first draft. The BDD will inherit any gaps in the PRD.
+- **Running `draft-bdd` before `spec-review`** — Generate BDD from a reviewed PRD, not a first draft. The BDD will inherit any gaps in the PRD.
 
-- **Not reading the `spec_review` output carefully** — The critique can feel uncomfortable if it finds many problems. Resist the urge to dismiss it. Each item flagged is a real risk.
+- **Not reading the `spec-review` output carefully** — The critique can feel uncomfortable if it finds many problems. Resist the urge to dismiss it. Each item flagged is a real risk.
 
 - **Treating AI outputs as finished artefacts** — Every output is a strong draft. It will miss things that require human context and judgement. Always read and edit before using.
 
@@ -342,9 +342,9 @@ A complete set of artefacts for a single feature: a feature analysis, a reviewed
 
 - [ ] I understand what each of the four skills does
 - [ ] I can explain when to use each skill in the workflow
-- [ ] I have successfully run `analyse_feature` against a real or sample feature
-- [ ] I have successfully run `draft_prd` and reviewed its output
-- [ ] I have run `spec_review` and read its critique honestly
+- [ ] I have successfully run `analyse-feature` against a real or sample feature
+- [ ] I have successfully run `draft-prd` and reviewed its output
+- [ ] I have run `spec-review` and read its critique honestly
 - [ ] I have edited a PRD based on a spec review critique
-- [ ] I have successfully run `draft_bdd` and reviewed the Gherkin scenarios
+- [ ] I have successfully run `draft-bdd` and reviewed the Gherkin scenarios
 - [ ] I can read Gherkin format and judge whether a scenario is testable

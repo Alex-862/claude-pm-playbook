@@ -207,7 +207,7 @@ A well-structured PRD in Markdown looks like this:
 
 Notice: the structure is consistent, hierarchical, and unambiguous. Every section has a clear heading. Lists are used for steps and items. Tables are used for rules. Checkboxes (`- [ ]`) are used for open questions.
 
-This structure is what makes the PRD useful as input to the `draft_bdd` and `spec_review` skills.
+This structure is what makes the PRD useful as input to the `draft-bdd` and `spec-review` skills.
 
 ### Why Consistent Structure Matters for AI Agents
 

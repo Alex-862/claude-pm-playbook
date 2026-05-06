@@ -301,7 +301,7 @@ Pick a feature you are currently working on or have recently worked on. Write a 
 
 **Part 3: Compare output quality**
 
-Run `/draft_prd` twice:
+Run `/draft-prd` twice:
 1. First with only a one-line description
 2. Second with your full context brief
 

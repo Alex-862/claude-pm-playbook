@@ -61,7 +61,7 @@ Typical outputs:
 
 ## Example Prompt
 
-Use the opportunity_mapping skill against:
+Use the opportunity-mapping skill against:
 
 - outputs/discovery-synthesis.md
 - business-context/

@@ -75,7 +75,7 @@ claude
 Example discovery workflow:
 
 ```text
-Use the discovery_synthesis skill against:
+Use the discovery-synthesis skill against:
 - business-context/
 - discovery/
 
@@ -196,10 +196,10 @@ These workflows help product managers:
 
 Examples:
 
-- `analyse_feature` — analyse an existing feature, journey, or product area to understand current behaviour, strengths, weaknesses, constraints, and opportunities before proposing change
-- `draft_prd` — generate a structured Product Requirements Document using available feature, business, customer, and operational context
-- `draft_bdd` — translate product requirements into clear, testable behavioural scenarios focused on system outcomes and customer-visible behaviour
-- `spec_review` — review a PRD, feature proposal, or specification for ambiguity, gaps, risk, inconsistency, and implementation concerns
+- `analyse-feature` — analyse an existing feature, journey, or product area to understand current behaviour, strengths, weaknesses, constraints, and opportunities before proposing change
+- `draft-prd` — generate a structured Product Requirements Document using available feature, business, customer, and operational context
+- `draft-bdd` — translate product requirements into clear, testable behavioural scenarios focused on system outcomes and customer-visible behaviour
+- `spec-review` — review a PRD, feature proposal, or specification for ambiguity, gaps, risk, inconsistency, and implementation concerns
 
 ---
 
@@ -226,9 +226,9 @@ Not immediate implementation.
 
 Examples:
 
-- `discovery_synthesis` — synthesise customer, business, operational, and market signals into themes, tensions, assumptions, and opportunity areas
-- `opportunity_mapping` — compare and structure potential opportunity spaces across customer value, strategic fit, differentiation, feasibility, and risk
-- `competitor_analysis` — analyse competitors, challengers, and adjacent experiences to identify market patterns, positioning, convergence, and differentiation opportunities
+- `discovery-synthesis` — synthesise customer, business, operational, and market signals into themes, tensions, assumptions, and opportunity areas
+- `opportunity-mapping` — compare and structure potential opportunity spaces across customer value, strategic fit, differentiation, feasibility, and risk
+- `competitor-analysis` — analyse competitors, challengers, and adjacent experiences to identify market patterns, positioning, convergence, and differentiation opportunities
 
 ---
 

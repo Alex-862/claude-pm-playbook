@@ -1,5 +1,5 @@
 ---
-name: analyse_feature
+name: analyse-feature
 description: Analyse an existing feature, repo area, or project flow and explain what it does, how it works, and what is unclear.
 ---
 

@@ -14,8 +14,8 @@ Use this when you want Claude to help synthesise signals, explore opportunity sp
 ## Suggested workflow
 
 1. Complete the starter context files
-2. Run `discovery_synthesis`
-3. Run `opportunity_mapping`
+2. Run `discovery-synthesis`
+3. Run `opportunity-mapping`
 4. Select a direction manually
 5. Use Claude to create a rough concept prototype if useful
 

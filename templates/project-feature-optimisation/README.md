@@ -16,9 +16,9 @@ Use this when there is already a known feature, current behaviour, metrics, and 
 
 1. Complete the feature context files
 2. Add baseline BDD for current behaviour
-3. Run `analyse_feature`
+3. Run `analyse-feature`
 4. Select and scope an initiative
-5. Run `draft_prd`
-6. Run `draft_bdd`
-7. Run `spec_review`
+5. Run `draft-prd`
+6. Run `draft-bdd`
+7. Run `spec-review`
 8. Build a prototype if useful
