@@ -1,55 +1,311 @@
-# AI PM Playbook Context
-
 ## Purpose
-This project uses the AI PM Playbook to support product management workflows in Claude Code.
 
-The goal is to help product managers analyse features, draft requirements, review specifications and generate BDD scenarios in a structured and repeatable way.
+This project uses the AI PM Playbook to support AI-native product management workflows in Claude Code.
+
+The goal is to help product managers:
+
+- explore ambiguous opportunities
+
+- synthesise discovery signals
+
+- analyse existing features
+
+- shape initiatives
+
+- draft requirements
+
+- review specifications
+
+- generate behavioural scenarios
+
+- prototype concepts
+
+using structured and repeatable workflows.
+
+---
+
+## Operating Model
+
+This playbook separates:
+
+- project context
+
+- reusable skills
+
+- reusable agents
+
+- generated outputs
+
+### Skills
+
+Skills are primarily used to:
+
+- generate outputs
+
+- structure thinking
+
+- synthesise information
+
+- produce artefacts
+
+Examples include:
+
+- discovery synthesis
+
+- opportunity mapping
+
+- PRD generation
+
+- BDD generation
+
+- prototype generation
+
+### Agents
+
+Agents are primarily used to:
+
+- challenge thinking
+
+- apply specialist reasoning lenses
+
+- identify gaps, ambiguity and risk
+
+- pressure-test generated outputs
+
+Examples include:
+
+- customer advocate
+
+- commercial strategist
+
+- systems thinker
+
+- risk reviewer
+
+- delivery challenger
+
+### Human Judgement
+
+Claude should support and augment product thinking, not replace it.
+
+Do not:
+
+- assume strategic decisions have been made
+
+- assume customer problems are validated
+
+- imply implementation commitment where ambiguity remains
+
+- present generated outputs as final truth
+
+---
 
 ## Audience
-Outputs should be written so they are understandable by:
-- Product managers
-- Engineers
-- Designers
-- Delivery leads
-- Risk / compliance stakeholders where relevant
 
-## Document locations
-Store generated artefacts in these locations:
+Outputs should be understandable by:
 
-- PRDs: /docs/prd
-- BDD scenarios: /docs/bdd
-- Supporting summaries or notes: /docs/summaries
+- product managers
 
-## Core principles
-- Prefer clarity over verbosity
-- Do not invent requirements, business rules, or customer intent
-- Be explicit when something is assumed or inferred
-- Use the terminology already present in the project where possible
-- Surface ambiguity rather than smoothing over it
-- Optimise for structured, reusable outputs
+- engineers
 
-## Expectations by artefact type
+- designers
 
-### Feature analysis
-- Explain what exists today in plain English
-- Identify flows, dependencies, gaps, and risks
-- Highlight what is unclear
+- delivery leads
+
+- operational stakeholders
+
+- risk/compliance stakeholders where relevant
+
+---
+
+## Repository Structure
+
+Store generated artefacts in the appropriate project locations.
+
+Typical folders may include:
+
+```text
+
+business-context/
+
+feature/
+
+discovery/
+
+opportunities/
+
+outputs/
+
+prototype/
+
+prototype2/
+
+bdd/
+
+```
+
+Do not assume every project contains all folders.
+
+---
+
+## Core Principles
+
+- prefer clarity over verbosity
+
+- do not invent requirements, business rules or customer intent
+
+- be explicit where something is inferred or assumed
+
+- surface ambiguity rather than smoothing over it
+
+- optimise for structured, reusable outputs
+
+- distinguish evidence from interpretation
+
+- challenge premature convergence on solutions
+
+- preserve unresolved questions where appropriate
+
+---
+
+## Discovery Expectations
+
+Discovery workflows should:
+
+- remain exploratory where appropriate
+
+- identify assumptions and weak signals
+
+- surface research gaps
+
+- identify opportunity spaces
+
+- avoid prematurely locking implementation details
+
+- distinguish customer problems from proposed solutions
+
+Discovery outputs may include:
+
+- synthesis documents
+
+- opportunity maps
+
+- hypothesis framing
+
+- competitor analysis
+
+- concept prototypes
+
+Do not draft PRDs unless explicitly requested.
+
+---
+
+## Delivery Expectations
+
+Delivery workflows should:
+
+- clearly explain intended behaviour
+
+- define scope and business logic
+
+- identify dependencies and risks
+
+- support implementation readiness
+
+- reduce ambiguity for engineering and design teams
+
+Delivery outputs may include:
+
+- feature analysis
+
+- PRDs
+
+- BDD scenarios
+
+- specification reviews
+
+- delivery-stage prototypes
+
+---
+
+## Prototype Expectations
+
+Prototypes are intended to:
+
+- make concepts tangible
+
+- support discussion and iteration
+
+- validate journeys and interactions
+
+- communicate ideas clearly
+
+Unless explicitly requested:
+
+- do not build production-ready systems
+
+- use mocked data where appropriate
+
+- keep implementation intentionally lightweight
+
+- prioritise clarity over completeness
+
+---
+
+## Expectations by Artefact Type
+
+### Feature Analysis
+
+- explain current behaviour in plain English
+
+- identify flows, dependencies, gaps and risks
+
+- identify ambiguity and unresolved assumptions
 
 ### PRDs
-- Include problem, success metrics, scope, journeys, business logic & requirements, dependencies, risks and open questions
-- Write requirements so they can later be converted into BDD
+
+- include problem framing, scope, journeys, business logic, dependencies, risks and open questions
+
+- write requirements that can later be translated into BDD
 
 ### BDD
-- Use Gherkin format
-- Cover happy paths, validation, failure scenarios, and edge cases
-- Keep scenarios precise and testable
 
-### Spec reviews
-- Critique rather than restate
-- Prioritise high-impact gaps, ambiguities, and risks
-- Highlight missing edge cases and unclear logic
+- use Gherkin format
+
+- focus on observable behaviour
+
+- cover happy paths, validation, failure scenarios and edge cases
+
+- keep scenarios precise and testable
+
+### Spec Reviews
+
+- critique rather than restate
+
+- prioritise ambiguity, gaps, risk and unresolved decisions
+
+- identify missing edge cases and unclear logic
+
+---
 
 ## Guardrails
-- Treat generated content as draft output unless reviewed by a human
-- Do not assume compliance, fraud, operational, or technical constraints are satisfied unless stated
-- Call out where additional stakeholder input or validation is needed
+
+Treat all generated content as draft output unless reviewed by a human.
+
+Do not:
+
+- assume compliance, fraud, operational or technical constraints are satisfied unless explicitly stated
+
+- assume strategic alignment without evidence
+
+- imply customer validation where none exists
+
+- present speculative value as certain
+
+Always:
+
+- call out uncertainty
+
+- identify assumptions
+
+- highlight where additional stakeholder input or validation is required
