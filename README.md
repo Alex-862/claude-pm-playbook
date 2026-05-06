@@ -232,6 +232,25 @@ Examples:
 
 ---
 
+## Shared Skills
+
+Shared skills support workflows that span both discovery and delivery phases.
+
+These workflows help product managers:
+- make ideas tangible
+- visualise journeys and concepts
+- reduce ambiguity
+- support discussion and iteration
+- evolve thinking across the product lifecycle
+
+Unlike discovery or delivery skills, shared skills are not tied to a single phase of work.
+
+Examples:
+
+- `prototype-concept` — generate lightweight local prototypes that make product ideas tangible enough for exploration, validation, discussion and iteration across both discovery and delivery workflows
+
+---
+
 ## Agents
 
 Agents are specialist thinking lenses used to challenge, review or reason about product work.
