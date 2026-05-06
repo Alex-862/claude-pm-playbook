@@ -16,8 +16,6 @@ Use available context such as:
 
 ## Agent orchestration
 
-Use the **repo-researcher** agent to analyse the feature or project area.
-
 The agent should:
 - inspect the relevant files, folders, and flows
 - explain the feature in plain English
