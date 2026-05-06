@@ -67,3 +67,18 @@ Typical outputs may include:
 - opportunity-options.md
 - assumptions.md
 - research-gaps.md
+
+## Example Prompt
+
+Use the discovery_synthesis skill against the following folders:
+
+- business-context/
+- discovery/
+
+Write the output to:
+
+- outputs/discovery-synthesis.md
+
+Do not draft a PRD.
+Do not propose implementation details yet.
+Focus on themes, assumptions, gaps, tensions, and opportunity areas.

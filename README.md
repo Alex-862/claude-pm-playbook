@@ -1,44 +1,198 @@
-# AI PM Playbook
+# Claude PM Playbook
 
-A reusable Claude Code playbook for product managers.
+A reusable standardisation layer for AI-native product management workflows using Claude Code.
 
-This repository contains:
-- Shared skills for common PM workflows
-- Shared specialist agents
-- A bootstrap script to install the playbook into any project
-- Starter project templates such as `CLAUDE.md`
+This repository provides:
 
-## How to use this playbook
+- Reusable skills
+- Reusable agents
+- Lightweight workflow standards
+- Project templates
+- Structured operating patterns
 
-- New Project
+The goal is to help product managers move beyond ad-hoc prompting and towards repeatable, context-driven AI workflows.
+
+---
+
+## Quick Start
+
+### 1. Clone the repository
+
 ```bash
-mkdir my-project
-cd my-project
+git clone https://github.com/Alex-862/claude-pm-playbook.git
+cd claude-pm-playbook
+```
+
+### 2. Install global skills and agents
+
+```bash
+bash bootstrap.sh
+```
+
+This installs skills and agents into:
+
+```text
+~/.claude/skills
+~/.claude/agents
+```
+
+### 3. Create a new project
+
+#### Discovery project
+
+Use when the problem space is ambiguous, opportunities are still being explored, and discovery or ideation is the focus.
+
+```bash
+mkdir my-discovery-project
+cd my-discovery-project
 git init
-```
-- Existing Project
-```bash
-git clone <repo-url>
-cd <repo-name>
-```
-- Run the bootstrap script
-```bash
-curl -sSL https://raw.githubusercontent.com/Alex-862/claude-pm-playbook/main/bootstrap.sh | bash
-```
-- Start Claude
-- Use standard skills and workflows
 
+bash ~/claude-pm-playbook/bootstrap.sh --type discovery
+```
+
+#### Feature optimisation project
+
+Use when an existing feature already exists, current behaviour is understood, metrics and BDD are available, and a known opportunity area exists.
+
+```bash
+mkdir my-feature-project
+cd my-feature-project
+git init
+
+bash ~/claude-pm-playbook/bootstrap.sh --type feature
+```
+
+### 4. Open Claude Code
+
+From inside your project folder:
+
+```bash
+claude
+```
+
+### 5. Run a workflow
+
+Example discovery workflow:
+
+```text
+Use the discovery_synthesis skill against:
+- business-context/
+- discovery/
+
+Write outputs to:
+- outputs/discovery-synthesis.md
+
+Do not draft a PRD yet.
+
+Focus on:
+- themes
+- tensions
+- assumptions
+- opportunity spaces
+- research gaps
+```
+
+---
+
+## Overview
+
+Most product teams currently use AI in fragmented ways:
+
+- Drafting PRDs
+- Rewriting documents
+- Summarising meetings
+- Generating acceptance criteria
+- Accelerating admin tasks
+
+This playbook is designed to support a more structured approach.
+
+The core idea is:
+
+```text
+Reusable workflows
++ structured product context
++ Claude Code
+= repeatable AI-native product workflows
+```
+
+The repository acts as a standardisation layer.
+
+Each PM or project then adds its own:
+
+- Feature context
+- Business context
+- Discovery inputs
+- Customer insights
+- Metrics
+- Behavioural specifications
+
+Claude workflows operate over that context to support:
+
+- Discovery
+- Opportunity shaping
+- PRD generation
+- BDD generation
+- Specification review
+- Prototype generation
+
+---
+
+## Mental Model
+
+This playbook intentionally separates:
+
+| Layer | Purpose |
+|---|---|
+| Standardisation Layer | Shared skills, agents, templates and workflow patterns |
+| Project Context Layer | Product-specific context, strategy, metrics and constraints |
+| Outputs Layer | Generated analysis, PRDs, BDD, prototypes and synthesis |
+
+The emphasis is on:
+
+- Structured context
+- Repeatability
+- Reasoning
+- Iteration
+- Human judgement
+
+Not autonomous product management.
+
+---
+
+## Repository Structure
+
+```text
+agents/
+skills/
+templates/
+bootstrap.sh
+README.md
+```
+
+---
+
+## Skills
+
+Skills are lightweight reusable workflows that help Claude operate consistently across product tasks.
+
+The repository currently separates skills into:
+
+- Discovery workflows
+- Delivery workflows
+
+---
 
 ## Delivery Skills
 
-Delivery skills are intended to support the definition, refinement, and execution phases of the product lifecycle.
+Delivery skills support the definition, refinement, and execution phases of the product lifecycle.
 
 These workflows help product managers:
-- structure intent
-- reduce ambiguity
-- define behaviour clearly
-- critique specifications
-- accelerate handoff into engineering and design workflows
+
+- Structure intent
+- Reduce ambiguity
+- Define behaviour clearly
+- Critique specifications
+- Accelerate handoff into engineering and design workflows
 
 Examples:
 
@@ -51,20 +205,22 @@ Examples:
 
 ## Discovery Skills
 
-Discovery skills are intended to support earlier-stage product thinking where problems, opportunities, and customer needs are less clearly defined.
+Discovery skills support earlier-stage product thinking where problems, opportunities, and customer needs are less clearly defined.
 
 These workflows help product managers:
-- synthesise fragmented signals
-- explore opportunity spaces
-- compare market and competitor patterns
-- identify assumptions and knowledge gaps
-- shape hypotheses before moving into delivery definition
+
+- Synthesise fragmented signals
+- Explore opportunity spaces
+- Compare market and competitor patterns
+- Identify assumptions and knowledge gaps
+- Shape hypotheses before moving into delivery definition
 
 The emphasis is on:
-- exploration
-- synthesis
-- strategic thinking
-- opportunity framing
+
+- Exploration
+- Synthesis
+- Strategic thinking
+- Opportunity framing
 
 Not immediate implementation.
 
@@ -74,43 +230,220 @@ Examples:
 - `opportunity_mapping` — compare and structure potential opportunity spaces across customer value, strategic fit, differentiation, feasibility, and risk
 - `competitor_analysis` — analyse competitors, challengers, and adjacent experiences to identify market patterns, positioning, convergence, and differentiation opportunities
 
-These workflows are intentionally exploratory and are designed to support product discovery before PRD generation.
+---
 
-## Included agents
+## Agents
 
-- `repo-researcher` — explores a repository and explains it in plain English
-- `requirements-critic` — identifies gaps, ambiguity, and missing requirements
-- `bdd-writer` — converts requirements into precise Gherkin scenarios
+Agents are higher-level reusable operating patterns intended to coordinate workflows across larger activities.
 
-## Repository structure
+Examples may include:
 
-```text
-.
-├─ agents/
-├─ skills/
-├─ templates/
-├─ curriculum/          ← PM learning programme (start here if you're new)
-├─ bootstrap.sh
-└─ README.md
+- Delivery coordination
+- Discovery orchestration
+- Specification refinement
+- Workflow sequencing
+- Prototype generation
+
+Agents are intentionally lightweight and designed to augment PM workflows rather than replace product judgement.
+
+---
+
+## Project Templates
+
+The repository includes starter templates for common AI-native PM workflows.
+
+---
+
+### Discovery Project Template
+
+Use when:
+
+- The problem space is ambiguous
+- Opportunities are still being explored
+- Discovery signals need synthesis
+- Customer needs are not yet fully understood
+
+Example use cases:
+
+- New product exploration
+- Strategic opportunity discovery
+- Market expansion ideas
+- Early-stage concept shaping
+
+Create a discovery project:
+
+```bash
+bash bootstrap.sh --type discovery
 ```
 
-## Learning programme
+This creates a starter structure including:
 
-New to Claude Code or AI-native product workflows? Start with the curriculum:
+- Business context
+- Discovery inputs
+- Customer signals
+- Opportunity outputs
+- Lightweight prototype structure
 
-**[curriculum/README.md](curriculum/README.md)** — Overview, executive summary, and module index
+---
 
-| Module | Topic |
-|--------|-------|
-| [Module 00](curriculum/module-00-mindset.md) | Why this changes everything |
-| [Module 01](curriculum/module-01-machine-readiness.md) | Machine setup |
-| [Module 02](curriculum/module-02-command-line.md) | Command line basics |
-| [Module 03](curriculum/module-03-github.md) | GitHub for PMs |
-| [Module 04](curriculum/module-04-markdown.md) | Markdown and structured artefacts |
-| [Module 05](curriculum/module-05-claude-code.md) | Claude Code basics |
-| [Module 06](curriculum/module-06-agent-workflows.md) | Using the skills in this repo |
-| [Module 07](curriculum/module-07-context-management.md) | Context management |
-| [Module 08](curriculum/module-08-ai-native-workflow.md) | End-to-end AI-native workflow |
-| [Workshop](curriculum/workshop-end-to-end.md) | Hands-on end-to-end workshop |
+### Feature Optimisation Project Template
 
-Supporting documents: [Setup Guide](curriculum/setup-guide-mac.md) · [Governance](curriculum/governance-and-guardrails.md) · [Adoption Plan](curriculum/adoption-plan.md) · [Glossary](curriculum/glossary.md)
+Use when:
+
+- An existing feature or journey already exists
+- Current behaviour is understood
+- Metrics and behavioural context are available
+- A known opportunity area exists
+
+Example use cases:
+
+- Onboarding improvements
+- Authentication improvements
+- Notification preference enhancements
+- Feature redesigns
+
+Create a feature optimisation project:
+
+```bash
+bash bootstrap.sh --type feature
+```
+
+This creates a starter structure including:
+
+- Feature context
+- Metrics
+- BDD
+- Outputs
+- Prototype folders
+
+---
+
+## Suggested Workflow
+
+A typical discovery workflow may look like:
+
+```text
+Discovery signals
+→ synthesis
+→ opportunity selection
+→ initiative shaping
+→ PRD
+→ BDD
+→ prototype
+→ implementation
+```
+
+For an existing feature, the workflow may look like:
+
+```text
+Current feature context
+→ feature analysis
+→ scoped initiative
+→ PRD
+→ BDD
+→ prototype
+→ implementation
+```
+
+---
+
+## Philosophy
+
+This repository is intentionally designed around several principles.
+
+### Structured context matters
+
+Claude performs significantly better when operating over:
+
+- Persistent context
+- Clear behavioural expectations
+- Structured product information
+- Defined constraints
+
+### Human judgement remains essential
+
+The playbook is designed to:
+
+- Augment PM thinking
+- Accelerate workflows
+- Improve synthesis
+- Reduce repetitive work
+
+It is not intended to replace:
+
+- Prioritisation
+- Strategic judgement
+- Stakeholder management
+- Customer understanding
+
+### Discovery and delivery are different
+
+Discovery workflows optimise for:
+
+- Ambiguity
+- Synthesis
+- Exploration
+- Hypothesis generation
+
+Delivery workflows optimise for:
+
+- Clarity
+- Behavioural definition
+- Implementation readiness
+- Specification quality
+
+The playbook intentionally separates these concerns.
+
+---
+
+## Example Project Structures
+
+### Discovery Project
+
+```text
+business-context/
+discovery/
+opportunities/
+outputs/
+prototype/
+```
+
+### Feature Optimisation Project
+
+```text
+feature/
+business-context/
+bdd/
+outputs/
+prototype/
+```
+
+---
+
+## Future Evolution
+
+Potential future enhancements include:
+
+- Jira integrations
+- Confluence integrations
+- Telemetry ingestion
+- Customer research ingestion
+- Multi-agent orchestration
+- Prototype workflows
+- Automated regression validation
+- Spec-driven delivery support
+
+---
+
+## Important Notes
+
+- This repository is intended for experimentation and workflow standardisation
+- Outputs generated by Claude still require human review and validation
+- The workflows are intentionally lightweight and adaptable
+- This repository does not prescribe a rigid product development lifecycle
+
+---
+
+## License
+
+MIT

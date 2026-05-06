@@ -58,3 +58,25 @@ Typical outputs:
 - opportunity-options.md
 - opportunity-scorecard.md
 - selected-direction.md
+
+## Example Prompt
+
+Use the opportunity_mapping skill against:
+
+- outputs/discovery-synthesis.md
+- business-context/
+- discovery/
+
+Write the output to:
+
+- outputs/opportunity-options.md
+
+Compare opportunities across:
+- customer value
+- strategic fit
+- differentiation
+- feasibility
+- risk
+- evidence quality
+
+Do not select a final direction unless explicitly asked.

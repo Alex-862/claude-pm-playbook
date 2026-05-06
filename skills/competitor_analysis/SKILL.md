@@ -48,3 +48,17 @@ Typical outputs:
 - competitor-analysis.md
 - market-patterns.md
 - differentiation-opportunities.md
+
+## Example Prompt
+
+Use the competitor_analysis skill to compare the product opportunity against relevant competitors and adjacent market patterns.
+
+Write the output to:
+
+- discovery/competitor-research.md
+
+Focus on:
+- customer outcomes
+- market patterns
+- differentiation opportunities
+- risks of copying competitors too literally
