@@ -442,8 +442,3 @@ Potential future enhancements include:
 - The workflows are intentionally lightweight and adaptable
 - This repository does not prescribe a rigid product development lifecycle
 
----
-
-## License
-
-MIT
