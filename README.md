@@ -29,12 +29,52 @@ curl -sSL https://raw.githubusercontent.com/Alex-862/claude-pm-playbook/main/boo
 - Use standard skills and workflows
 
 
-## Included skills
+## Delivery Skills
 
-- `analyse_feature` — understand an existing feature, journey, or codebase area before drafting anything
-- `draft_prd` — generate a structured Product Requirements Document from available context
-- `draft_bdd` — convert requirements into clear, testable BDD scenarios
-- `spec_review` — critique a PRD, feature, or proposal for gaps, ambiguity, and risk
+Delivery skills are intended to support the definition, refinement, and execution phases of the product lifecycle.
+
+These workflows help product managers:
+- structure intent
+- reduce ambiguity
+- define behaviour clearly
+- critique specifications
+- accelerate handoff into engineering and design workflows
+
+Examples:
+
+- `analyse_feature` — analyse an existing feature, journey, or product area to understand current behaviour, strengths, weaknesses, constraints, and opportunities before proposing change
+- `draft_prd` — generate a structured Product Requirements Document using available feature, business, customer, and operational context
+- `draft_bdd` — translate product requirements into clear, testable behavioural scenarios focused on system outcomes and customer-visible behaviour
+- `spec_review` — review a PRD, feature proposal, or specification for ambiguity, gaps, risk, inconsistency, and implementation concerns
+
+---
+
+## Discovery Skills
+
+Discovery skills are intended to support earlier-stage product thinking where problems, opportunities, and customer needs are less clearly defined.
+
+These workflows help product managers:
+- synthesise fragmented signals
+- explore opportunity spaces
+- compare market and competitor patterns
+- identify assumptions and knowledge gaps
+- shape hypotheses before moving into delivery definition
+
+The emphasis is on:
+- exploration
+- synthesis
+- strategic thinking
+- opportunity framing
+
+Not immediate implementation.
+
+Examples:
+
+- `discovery_synthesis` — synthesise customer, business, operational, and market signals into themes, tensions, assumptions, and opportunity areas
+- `opportunity_mapping` — compare and structure potential opportunity spaces across customer value, strategic fit, differentiation, feasibility, and risk
+- `competitor_analysis` — analyse competitors, challengers, and adjacent experiences to identify market patterns, positioning, convergence, and differentiation opportunities
+
+These workflows are intentionally exploratory and are designed to support product discovery before PRD generation.
 
 ## Included agents
 
