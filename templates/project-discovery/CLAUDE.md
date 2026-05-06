@@ -138,8 +138,6 @@ outputs/
 
 prototype/
 
-prototype2/
-
 bdd/
 
 ```
