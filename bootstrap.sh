@@ -1,43 +1,40 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
 set -e
 
-REPO_URL="https://github.com/Alex-862/claude-pm-playbook.git"
-TMP_DIR="$(mktemp -d)"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-cleanup() {
-  rm -rf "$TMP_DIR"
-}
-trap cleanup EXIT
+echo "Installing Claude PM Playbook..."
 
-echo "Setting up AI PM Playbook..."
+mkdir -p ~/.claude/agents
+mkdir -p ~/.claude/skills
 
-echo "Cloning playbook..."
-git clone --depth 1 "$REPO_URL" "$TMP_DIR" >/dev/null 2>&1
-
-echo "Creating Claude directories..."
-mkdir -p "$HOME/.claude/skills"
-mkdir -p "$HOME/.claude/agents"
-
-echo "Installing skills..."
-cp -R "$TMP_DIR/skills/." "$HOME/.claude/skills/"
-
-echo "Installing agents..."
-cp -R "$TMP_DIR/agents/." "$HOME/.claude/agents/"
-
-echo "Creating project docs folders..."
-mkdir -p docs/prd
-mkdir -p docs/bdd
-mkdir -p docs/summaries
-
-if [ ! -f "CLAUDE.md" ]; then
-  echo "Adding starter CLAUDE.md to project root..."
-  cp "$TMP_DIR/templates/CLAUDE.md" "./CLAUDE.md"
-else
-  echo "CLAUDE.md already exists in this project, leaving it unchanged."
+if [ -d "$SCRIPT_DIR/agents" ]; then
+  cp -R "$SCRIPT_DIR/agents/"* ~/.claude/agents/
+  echo "Installed agents"
 fi
 
-echo ""
+if [ -d "$SCRIPT_DIR/skills" ]; then
+  cp -R "$SCRIPT_DIR/skills/"* ~/.claude/skills/
+  echo "Installed skills"
+fi
+
+if [ "$1" = "--type" ] && [ "$2" = "discovery" ]; then
+  echo "Creating discovery project structure..."
+  cp -R "$SCRIPT_DIR/templates/project-discovery/"* .
+  echo "Discovery project template created"
+
+elif [ "$1" = "--type" ] && [ "$2" = "feature" ]; then
+  echo "Creating feature optimisation project structure..."
+  cp -R "$SCRIPT_DIR/templates/project-feature-optimisation/"* .
+  echo "Feature optimisation project template created"
+
+else
+  echo "No project template selected"
+  echo ""
+  echo "Usage:"
+  echo "  bash bootstrap.sh --type discovery"
+  echo "  bash bootstrap.sh --type feature"
+fi
+
 echo "Done."
-echo "Next steps:"
-echo "1. Run: claude"
-echo "2. Try: a skill like /analyse_feature or /draft_prd"
