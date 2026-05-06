@@ -234,17 +234,18 @@ Examples:
 
 ## Agents
 
-Agents are higher-level reusable operating patterns intended to coordinate workflows across larger activities.
+Agents are specialist thinking lenses used to challenge, review or reason about product work.
 
-Examples may include:
+Current agents:
 
-- Delivery coordination
-- Discovery orchestration
-- Specification refinement
-- Workflow sequencing
-- Prototype generation
+* discovery-facilitator — supports ambiguous discovery, surfaces assumptions, and prevents premature solutioning
+* customer-advocate — challenges whether ideas genuinely solve customer problems
+* commercial-strategist — assesses strategic fit, differentiation and commercial value
+* risk-reviewer — identifies risk, compliance, customer harm and operational concerns
+* delivery-challenger — pressure-tests whether work is clear enough for delivery
+* systems-thinker — considers dependencies, data flows, edge cases and unintended consequences
 
-Agents are intentionally lightweight and designed to augment PM workflows rather than replace product judgement.
+Agents are not intended to duplicate skills. They should not be the main way to generate PRDs, BDD or delivery artefacts. Instead, they provide specialist review and reasoning perspectives.
 
 ---
 
